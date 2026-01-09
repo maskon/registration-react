@@ -1,8 +1,9 @@
 {
-  "name": "my-register",
+  "name": "registration",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://maskon.github.io/registration-react",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
