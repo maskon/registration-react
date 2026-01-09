@@ -1,0 +1,287 @@
+/* src/App.css - ОБНОВЛЕННЫЙ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  background: #f5f5f5;
+  color: #333;
+}
+
+/* Стили для загрузки */
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Стили для дашборда - ОБНОВЛЕННЫЕ */
+.dashboard {
+  width: 100%;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.dashboard-header h1 {
+  color: #2d3748;
+  margin-bottom: 8px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.dashboard-header p {
+  color: #718096;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.dashboard-content {
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+}
+
+.user-card {
+  margin-bottom: 24px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.label {
+  font-weight: 600;
+  color: #4a5568;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.label::before {
+  content: '•';
+  color: #667eea;
+}
+
+.value {
+  color: #2d3748;
+  font-size: 14px;
+  background: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  word-break: break-word;
+  line-height: 1.4;
+}
+
+.user-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1;
+  min-width: 140px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.refresh-btn {
+  background: #4299e1;
+  color: white;
+}
+
+.refresh-btn:hover {
+  background: #3182ce;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(66, 153, 225, 0.3);
+}
+
+.logout-btn {
+  background: #f56565;
+  color: white;
+}
+
+.logout-btn:hover {
+  background: #e53e3e;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(245, 101, 101, 0.3);
+}
+
+.debug-info {
+  padding: 16px;
+  background: #ebf8ff;
+  border-radius: 8px;
+  border: 1px solid #bee3f8;
+  margin-top: 20px;
+}
+
+.debug-info h3 {
+  color: #2c5282;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.debug-info p {
+  color: #2c5282;
+  font-size: 13px;
+  margin: 6px 0;
+  padding: 6px 0;
+  border-bottom: 1px dashed #bee3f8;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.debug-info p::before {
+  content: '✓';
+  font-weight: bold;
+}
+
+.debug-info p:last-child {
+  border-bottom: none;
+}
+
+/* Адаптив для мобилок */
+@media (max-width: 480px) {
+  .dashboard-header h1 {
+    font-size: 20px;
+  }
+
+  .dashboard-header p {
+    font-size: 14px;
+  }
+
+  .dashboard-content {
+    padding: 16px;
+  }
+
+  .info-item {
+    padding: 10px 0;
+  }
+
+  .label {
+    font-size: 13px;
+  }
+
+  .value {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .user-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .action-btn {
+    width: 100%;
+    min-width: 100%;
+    padding: 12px 16px;
+  }
+
+  .debug-info {
+    padding: 12px;
+  }
+
+  .debug-info h3 {
+    font-size: 14px;
+  }
+
+  .debug-info p {
+    font-size: 12px;
+  }
+}
+
+/* Планшеты */
+@media (min-width: 481px) and (max-width: 768px) {
+  .dashboard-header h1 {
+    font-size: 21px;
+  }
+
+  .user-actions {
+    gap: 10px;
+  }
+
+  .action-btn {
+    min-width: 120px;
+  }
+}
+
+/* Десктоп */
+@media (min-width: 769px) {
+  .info-item {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .value {
+    max-width: 70%;
+    text-align: right;
+  }
+}
