@@ -1,4 +1,3 @@
-// src/components/auth/AuthLayout.jsx - ОБНОВЛЕННЫЙ
 import React from 'react'
 import styles from './AuthLayout.module.css'
 

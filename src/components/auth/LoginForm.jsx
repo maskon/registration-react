@@ -1,4 +1,3 @@
-// src/components/auth/LoginForm.jsx - УПРОЩЕННАЯ ВЕРСИЯ
 import React, { useState } from 'react'
 import { useAuth } from '../../contexts/AuthContext'
 import styles from './LoginForm.module.css'

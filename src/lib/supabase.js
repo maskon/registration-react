@@ -8,8 +8,8 @@ export const supabase = createClient(supabaseUrl, supabaseKey, {
   auth: {
     autoRefreshToken: true,
     persistSession: true,
-    detectSessionInUrl: true, // важно для OAuth
-    flowType: 'pkce', // Более безопасный flow для SPA
+    detectSessionInUrl: true,
+    flowType: 'pkce',
     storage: {
       // Безопасное хранилище с обработкой ошибок
       getItem: key => {

@@ -1,6 +1,6 @@
-/* src/components/auth/AuthLayout.module.css */
 .container {
   min-height: 100vh;
+  min-width: 100vi;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,7 +13,7 @@
   border-radius: 12px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
   width: 100%;
-  max-width: 480px; /* Фиксированная максимальная ширина */
+  max-width: 420px;
   padding: 24px;
   margin: 0 auto;
   transition: all 0.3s ease;
@@ -61,29 +61,10 @@
 
 /* Адаптив для мобилок */
 @media (max-width: 480px) {
-  .container {
-    padding: 12px;
-    align-items: flex-start;
-    padding-top: 40px;
-  }
-
   .card {
-    padding: 20px 16px;
-    border-radius: 10px;
+    padding: 20px 10px;
   }
-
   .title {
-    font-size: 24px;
-  }
-
-  .subtitle {
-    font-size: 14px;
-  }
-}
-
-/* Планшеты */
-@media (min-width: 481px) and (max-width: 768px) {
-  .card {
-    max-width: 440px;
+    font-size: 23px;
   }
 }
